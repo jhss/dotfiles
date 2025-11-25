@@ -21,7 +21,7 @@ COPY ${USER_HOME}/.ssh/id_rsa /root/.ssh/id_rsa
 RUN chmod 400 ~/.ssh/id_rsa
 
 RUN sudo ssh-keyscan -t rsa github.com >> /root/.ssh/known_hosts
-RUN git clone https://github.com/SeongwoongCho/dotfiles.git ~/.dotfiles
+RUN git clone https://github.com/jhss/dotfiles.git ~/.dotfiles
 RUN cd ~/.dotfiles && bash src/install.sh
 
 CMD ["zsh"]
